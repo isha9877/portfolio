@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Personal Portfolio Website</title>
+    <!-- google font icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <!-- local css file -->
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <!-- header section starts -->
+    <header class="header" id="header">
+        <a><i class="menu material-icons"> menu </i></a>
+        <nav class="navbar">
+            <a href="#">home</a>
+            <!--<a href="#portfolio">portfolio</a>-->
+            <a href="#about">about</a>
+            <a href="#resume">resume</a>
+            <a href="#contact">contact</a>
+            <div style="margin: 2rem 0;">
+                <div class="toggle-container">
+                    <input type="checkbox" id="switch" name="theme" /><label for="switch">Toggle</label>
+                </div>
+            </div>
+        </nav>
+
+    </header>
+
+
+    <!-- header section ends -->
+    <!-- home section starts -->
+    <section class="home" id="home">
+
+        <h1 class="hero-text">
+            hello, i'm <br />
+            <span>Isha Gupta</span>
+        </h1>
+
+        <p>and this is my resume</p>
+    </section>
+
+    <!-- home section ends -->
+    <!-- portfolio section starts -->
+    <!-- portfolio section ends -->
+    <!-- about section starts -->
+    <section class="about" id="about">
+        <div class="box-container">
+            <div class="box">
+                <div class="image">
+                    <img src="images/hero-image.jpeg" alt="" />
+                </div>
+            </div>
+            <div class="box">
+                <h1 class="heading">about <span>me</span></h1>
+                <p>
+                    Welcome to my portfolio! I'm Isha, a passionate and dedicated web developer with a
+                    strong background in creating dynamic and user-friendly websites.I specialize in front-end
+                    development and have experience working in web development to bring
+                    ideas to life.
+                </p>
+                <p>
+                    I have developed a solid foundation in HTML, CSS, and JavaScript, which form the backbone of
+                    every website I create.
+                </p>
+                <a href="#" class="btn">hire me</a>
+                <a href="#" class="btn">download CV</a>
+            </div>
+        </div>
+    </section>
+    <!-- about section ends -->
+    <!-- resume section starts -->
+    <section class="resume" id="resume">
+        <h1 class="heading">my <span>resume</span></h1>
+        <div class="col-container">
+            <div class="col">
+                <h2>education</h2>
+                <div class="box">
+                    <span><i class="material-icons"> calendar_today </i> Jan 2019 - Jan 2021</span>
+                    <h3>bachelors in information technology</h3>
+                    <p>
+                        completed my graduation from chetna hazarimal somani college .
+                    </p>
+                    <p class="university">Maharashtra board university</p>
+                </div>
+                <div class="box">
+                    <span><i class="material-icons"> calendar_today </i> Jan 2021 - Jan 2023</span>
+                    <h3>masters in computer science</h3>
+                    <p>
+                        completing my masters from hiray college in bandra.
+                    </p>
+                    <p class="university">Maharashtra board university</p>
+                </div>
+            </div>
+            <div class="col">
+                <h2>experience</h2>
+                <div class="box">
+                    <span><i class="material-icons"> calendar_today </i> Oct 2022 - July 2023</span>
+                    <h3>software developer</h3>
+                    <p>
+                        working on asp.net c# and sql server as software developer .
+                    </p>
+                    <p class="university">Biz technologies</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- resume section ends -->
+
+    <!-- services section starts -->
+    <section class="services" id="services">
+        <h1 class="heading">my <span>services</span></h1>
+        <div class="box-container">
+            <div class="box">
+                <i class="icon material-icons"> grid_view </i>
+                <h2>Responsive Web Design</h2>
+                <p>
+                    Create visually stunning websites that adapt seamlessly to various devices and screen sizes. We
+                    prioritize user experience by crafting responsive designs that ensure your website looks great and
+                    functions flawlessly on desktops, laptops, tablets, and smartphones.
+                </p>
+                <a href="#" class="btn-2"> <i class="material-icons"> </i></a>
+            </div>
+            <div class="box">
+                <i class="icon material-icons"> poll </i>
+                <h2>Front-End Development</h2>
+                <p>
+                    Bring your ideas to life with captivating user interfaces using the latest web technologies. Our
+                    expertise in HTML, CSS, and JavaScript allows us to create dynamic and interactive websites that
+                    engage your visitors and leave a lasting impression.
+                </p>
+                <a href="#" class="btn-2"> <i class="material-icons"> </i></a>
+            </div>
+            <div class="box">
+                <i class="icon material-icons"> smart_display </i>
+                <h2>UI Design</h2>
+                <p>
+                    Create visually appealing and intuitive user interfaces. Our design expertise goes beyond
+                    development, enabling us to craft stunning visuals and engaging user experiences. We prioritize
+                    user-centered design principles to ensure your website captivates and delights your visitors.
+                </p>
+                <a href="#" class="btn-2"> <i class="material-icons"> </i></a>
+            </div>
+        </div>
+    </section>
+    <!-- services section ends -->
+
+    <!-- contact section starts -->
+    <section class="contact" id="contact">
+        <h1 class="heading">get <span>in touch</span></h1>
+        <div class="col-container">
+            <div class="col">
+                <h2>get in touch</h2>
+                <!-- <form action="form-process.php" method="POST" class="formcarry-form"> -->
+
+                <input type="text" name="name" id="name" required placeholder="your name">
+                <input type="email" name="email" id="email" required placeholder="your email">
+                <textarea name="message" id="message" required placeholder="your message"></textarea>
+                <button type=”submit” name=”submit” class="btn"> Submit </buton>
+
+                    <!-- </form> -->
+            </div>
+            <div class="col">
+                <h2>my contact details</h2>
+                <p>email</p>
+                <span>igupta2100@gmail.com</span>
+                <br />
+                <br />
+                <p>address</p>
+                <span>
+                    Santacruz East<br />
+                    Mumbai 400055 <br />
+                    Maharashtra
+                </span>
+            </div>
+        </div>
+    </section>
+    <!-- contact section ends -->
+    <!-- footer section starts -->
+    <section class="footer" id="footer">
+        <div class="socials">
+            <ion-icon name="logo-twitter"></ion-icon>
+            <a href="https://instagram.com/isha_gupta_79?igshid=MzNlNGNkZWQ4Mg==" target="_blank"> <ion-icon
+                    name="logo-instagram"></ion-icon></a>
+            <a href="https://www.linkedin.com/in/isha-gupta-70a226190" target="_blank"><ion-icon
+                    name="logo-linkedin"></ion-icon></a>
+        </div>
+        <p>designed and developed by Isha Gupta</p>
+    </section>
+    <!-- footer section ends -->
+    <!-- ionicons cdn -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <!-- local js file -->
+    <script src="script.js"></script>
+</body>
+
+</html>
