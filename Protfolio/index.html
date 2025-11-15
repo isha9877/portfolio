@@ -5,7 +5,10 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Personal Portfolio Website</title>
+    <meta name="description" content="Isha Gupta - Web Developer Portfolio showcasing responsive design, front-end development, and UI design services" />
+    <meta name="keywords" content="web developer, portfolio, front-end, UI design, HTML, CSS, JavaScript" />
+    <meta name="author" content="Isha Gupta" />
+    <title>Isha Gupta - Web Developer Portfolio</title>
     <!-- google font icons -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
     <!-- local css file -->
@@ -20,186 +23,178 @@
 </head>
 
 <body>
-    <!-- header section starts -->
-    <header class="header" id="header">
-        <a><i class="menu material-icons"> menu </i></a>
-        <nav class="navbar">
-            <a href="#">home</a>
-            <!--<a href="#portfolio">portfolio</a>-->
-            <a href="#about">about</a>
-            <a href="#resume">resume</a>
-            <a href="#contact">contact</a>
-            <div style="margin: 2rem 0;">
-                <div class="toggle-container">
-                    <input type="checkbox" id="switch" name="theme" /><label for="switch">Toggle</label>
-                </div>
+    <!-- Navigation Header -->
+    <header class="header" id="header" role="banner">
+        <button class="menu-toggle" aria-label="Toggle navigation menu">
+            <i class="menu material-icons">menu</i>
+        </button>
+        <nav class="navbar" role="navigation" aria-label="Main navigation">
+            <ul class="nav-list">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#resume">Resume</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="theme-toggle-container">
+                <input type="checkbox" id="switch" name="theme" class="theme-switch" />
+                <label for="switch" class="theme-label">Dark Mode</label>
             </div>
         </nav>
-
     </header>
 
-
-    <!-- header section ends -->
-    <!-- home section starts -->
-    <section class="home" id="home">
-
-        <h1 class="hero-text">
-            hello, i'm <br />
-            <span>Isha Gupta</span>
-        </h1>
-
-        <p>and this is my resume</p>
-    </section>
-
-    <!-- home section ends -->
-    <!-- portfolio section starts -->
-    <!-- portfolio section ends -->
-    <!-- about section starts -->
-    <section class="about" id="about">
-        <div class="box-container">
-            <div class="box">
-                <div class="image">
-                    <img src="images/hero-image.jpeg" alt="" />
-                </div>
+    <!-- Hero Section -->
+    <main>
+        <section class="hero" id="home" role="region" aria-label="Hero section">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    Hello, I'm <br />
+                    <span class="highlight">Isha Gupta</span>
+                </h1>
+                <p class="hero-subtitle">Web Developer | UI Designer | Problem Solver</p>
             </div>
-            <div class="box">
-                <h1 class="heading">about <span>me</span></h1>
-                <p>
-                    Welcome to my portfolio! I'm Isha, a passionate and dedicated web developer with a
-                    strong background in creating dynamic and user-friendly websites.I specialize in front-end
-                    development and have experience working in web development to bring
-                    ideas to life.
-                </p>
-                <p>
-                    I have developed a solid foundation in HTML, CSS, and JavaScript, which form the backbone of
-                    every website I create.
-                </p>
-                <!-- <a href="#" class="btn">hire me</a>
-                <a href="#" class="btn">download CV</a> -->
-            </div>
-        </div>
-    </section>
-    <!-- about section ends -->
-    <!-- resume section starts -->
-    <section class="resume" id="resume">
-        <h1 class="heading">my <span>resume</span></h1>
-        <div class="col-container">
-            <div class="col">
-                <h2>education</h2>
-                <div class="box">
-                    <span><i class="material-icons"> calendar_today </i> Jan 2019 - Jan 2021</span>
-                    <h3>bachelors in information technology</h3>
+        </section>
+
+        <!-- About Section -->
+        <section class="about" id="about" role="region" aria-label="About section">
+            <div class="container">
+                <figure class="about-image">
+                    <img src="images/hero-image.jpeg" alt="Isha Gupta - Web Developer" />
+                </figure>
+                <article class="about-content">
+                    <h2 class="section-title">About <span>Me</span></h2>
                     <p>
-                        completed my graduation from chetna hazarimal somani college .
+                        Welcome to my portfolio! I'm Isha, a passionate and dedicated web developer with a
+                        strong background in creating dynamic and user-friendly websites. I specialize in front-end
+                        development and have experience working in web development to bring
+                        ideas to life.
                     </p>
-                    <p class="university">Maharashtra board university</p>
-                </div>
-                <div class="box">
-                    <span><i class="material-icons"> calendar_today </i> Jan 2021 - Jan 2023</span>
-                    <h3>masters in computer science</h3>
                     <p>
-                        completing my masters from hiray college in bandra.
+                        I have developed a solid foundation in HTML, CSS, and JavaScript, which form the backbone of
+                        every website I create.
                     </p>
-                    <p class="university">Maharashtra board university</p>
-                </div>
+                </article>
             </div>
-            <div class="col">
-                <h2>experience</h2>
-                <div class="box">
-                    <span><i class="material-icons"> calendar_today </i> Oct 2022 - July 2023</span>
-                    <h3>software developer</h3>
+        </section>
+
+        <!-- Resume/Experience Section -->
+        <section class="resume" id="resume" role="region" aria-label="Resume section">
+            <h2 class="section-title">My <span>Experience</span></h2>
+            <div class="resume-container">
+                <article class="resume-column">
+                    <h3>Education</h3>
+                    <div class="experience-card">
+                        <time datetime="2019-01">Jan 2019 - Jan 2021</time>
+                        <h4>Bachelors in Information Technology</h4>
+                        <p>Completed graduation from Chetna Hazarimal Somani College.</p>
+                        <p class="institution">Maharashtra Board University</p>
+                    </div>
+                    <div class="experience-card">
+                        <time datetime="2021-01">Jan 2021 - Jan 2023</time>
+                        <h4>Masters in Computer Science</h4>
+                        <p>Completing masters from Hiray College in Bandra.</p>
+                        <p class="institution">Maharashtra Board University</p>
+                    </div>
+                </article>
+                <article class="resume-column">
+                    <h3>Experience</h3>
+                    <div class="experience-card">
+                        <time datetime="2022-10">Oct 2022 - July 2023</time>
+                        <h4>Software Developer</h4>
+                        <p>Worked on ASP.NET, C#, and SQL Server as a software developer.</p>
+                        <p class="institution">Biz Technologies</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section class="services" id="services" role="region" aria-label="Services section">
+            <h2 class="section-title">My <span>Services</span></h2>
+            <div class="services-grid">
+                <article class="service-card">
+                    <i class="icon material-icons">grid_view</i>
+                    <h3>Responsive Web Design</h3>
                     <p>
-                        working on asp.net c# and sql server as software developer .
+                        Create visually stunning websites that adapt seamlessly to various devices and screen sizes. I
+                        prioritize user experience by crafting responsive designs that ensure your website looks great and
+                        functions flawlessly on desktops, laptops, tablets, and smartphones.
                     </p>
-                    <p class="university">Biz technologies</p>
-                </div>
+                </article>
+                <article class="service-card">
+                    <i class="icon material-icons">poll</i>
+                    <h3>Front-End Development</h3>
+                    <p>
+                        Bring your ideas to life with captivating user interfaces using the latest web technologies. My
+                        expertise in HTML, CSS, and JavaScript allows me to create dynamic and interactive websites that
+                        engage your visitors and leave a lasting impression.
+                    </p>
+                </article>
+                <article class="service-card">
+                    <i class="icon material-icons">smart_display</i>
+                    <h3>UI Design</h3>
+                    <p>
+                        Create visually appealing and intuitive user interfaces. My design expertise goes beyond
+                        development, enabling me to craft stunning visuals and engaging user experiences. I prioritize
+                        user-centered design principles to ensure your website captivates and delights your visitors.
+                    </p>
+                </article>
+            </div>
+        </section>
 
-            </div>
-        </div>
-    </section>
-    <!-- resume section ends -->
+        <!-- Contact Section -->
+        <section class="contact" id="contact" role="region" aria-label="Contact section">
+            <h2 class="section-title">Get <span>In Touch</span></h2>
+            <div class="contact-container">
+                <form id="contactForm" class="contact-form" method="POST" novalidate>
+                    <fieldset>
+                        <legend>Send me a message</legend>
+                        <div class="form-group">
+                            <input type="text" name="name" id="name" required placeholder="Your name" aria-label="Your name" />
+                        </div>
+                        <div class="form-group">
+                            <input type="email" name="email" id="email" required placeholder="Your email" aria-label="Your email" />
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" name="mobile" id="mobile" placeholder="Your phone number" aria-label="Your phone number" />
+                        </div>
+                        <div class="form-group">
+                            <textarea name="message" id="message" required placeholder="Your message" rows="6" aria-label="Your message"></textarea>
+                        </div>
+                        <button type="submit" class="btn" aria-label="Submit contact form">Send Message</button>
+                    </fieldset>
+                </form>
+                <div id="formMessage" class="form-feedback" role="alert" aria-live="polite" style="display: none;"></div>
 
-    <!-- services section starts -->
-    <section class="services" id="services">
-        <h1 class="heading">my <span>services</span></h1>
-        <div class="box-container">
-            <div class="box">
-                <i class="icon material-icons"> grid_view </i>
-                <h2>Responsive Web Design</h2>
-                <p>
-                    Create visually stunning websites that adapt seamlessly to various devices and screen sizes. We
-                    prioritize user experience by crafting responsive designs that ensure your website looks great and
-                    functions flawlessly on desktops, laptops, tablets, and smartphones.
-                </p>
-                <a href="#" class="btn-2"> <i class="material-icons"> </i></a>
+                <address class="contact-info">
+                    <h3>Contact Details</h3>
+                    <p>
+                        <strong>Email:</strong><br>
+                        <a href="mailto:biztechisha@gmail.com">biztechisha@gmail.com</a>
+                    </p>
+                    <p>
+                        <strong>Address:</strong><br>
+                        Santacruz East<br />
+                        Mumbai 400055<br />
+                        Maharashtra, India
+                    </p>
+                </address>
             </div>
-            <div class="box">
-                <i class="icon material-icons"> poll </i>
-                <h2>Front-End Development</h2>
-                <p>
-                    Bring your ideas to life with captivating user interfaces using the latest web technologies. Our
-                    expertise in HTML, CSS, and JavaScript allows us to create dynamic and interactive websites that
-                    engage your visitors and leave a lasting impression.
-                </p>
-                <a href="#" class="btn-2"> <i class="material-icons"> </i></a>
-            </div>
-            <div class="box">
-                <i class="icon material-icons"> smart_display </i>
-                <h2>UI Design</h2>
-                <p>
-                    Create visually appealing and intuitive user interfaces. Our design expertise goes beyond
-                    development, enabling us to craft stunning visuals and engaging user experiences. We prioritize
-                    user-centered design principles to ensure your website captivates and delights your visitors.
-                </p>
-                <a href="#" class="btn-2"> <i class="material-icons"> </i></a>
-            </div>
-        </div>
-    </section>
-    <!-- services section ends -->
+        </section>
+    </main>
 
-    <!-- contact section starts -->
-    <section class="contact" id="contact">
-        <h1 class="heading">get <span>in touch</span></h1>
-        <div class="col-container">
-            <div class="col">
-                <h2>Get in Touch</h2>
-                <!-- <form action="form-process.php" method="POST" class="formcarry-form"> -->
+    <!-- Footer Section -->
+    <footer class="footer" id="footer" role="contentinfo">
+        <nav class="social-links" aria-label="Social media links">
+            <a href="https://github.com/isha9877/portfolio.git" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile">
+                <ion-icon name="logo-github"></ion-icon>
+            </a>
+            <a href="https://www.linkedin.com/in/isha-gupta-70a226190" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile">
+                <ion-icon name="logo-linkedin"></ion-icon>
+            </a>
+        </nav>
+        <p>&copy; 2024 Designed and developed by <strong>Isha Gupta</strong></p>
+    </footer>
 
-                <input type="text" name="name" id="name" required placeholder="your name">
-                <input type="email" name="email" id="email" required placeholder="your email">
-                <textarea name="message" id="message" required placeholder="your message"></textarea>
-                <button type=”submit” name=”submit” class="btn"> Submit </buton>
-
-                    <!-- </form> -->
-            </div>
-            <div class="col">
-                <h2>My contact details</h2>
-                <p>email</p>
-                <span>biztechisha@gmail.com</span>
-                <br />
-                <br />
-                <p>address</p>
-                <span>
-                    Santacruz East<br />
-                    Mumbai 400055 <br />
-                    Maharashtra
-                </span>
-            </div>
-        </div>
-    </section>
-    <!-- contact section ends -->
-    <!-- footer section starts -->
-    <section class="footer" id="footer">
-        <div class="socials">
-           <a href="https://github.com/isha9877/portfolio.git" target="_blank">
-            <ion-icon name="logo-github"></ion-icon></a>
-            
-            <a href="https://www.linkedin.com/in/isha-gupta-70a226190" target="_blank"><ion-icon
-                    name="logo-linkedin"></ion-icon></a>
-        </div>
-        <p>designed and developed by Isha Gupta</p>
-    </section>
-    <!-- footer section ends -->
     <!-- ionicons cdn -->
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>

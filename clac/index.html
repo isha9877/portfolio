@@ -16,31 +16,63 @@
         <div id="div2" class="container">
             <div class="inner-box">
                 <div class="text-center">
-                    <h1>Calculator</h1>
+                    <h1>Scientific Calculator</h1>
+                </div>
+                <div class="display-section">
+                    <input type="text" id="display" class="calculator-display" readonly>
                 </div>
                 <div class="row">
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <input type="text" onkeypress="validateNumberInput(event)" id="num1" class="form-control" placeholder="Enter number" required><br>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <input type="text" onkeypress="validateNumberInput(event)" id="num2" class="form-control" placeholder="Enter number" required><br>
-                        </div>
-                    </div>
                     <div class="col-md-12">
-                        <div class="form-group">
-                            <button onclick="add()">Add</button>
-                            <button onclick="subtract()">Subtract</button>
-                            <button onclick="multiply()">Multiply</button>
-                            <button onclick="divide()">Divide</button>
-                            <button onclick="clearFields()">Clear</button>
+                        <div class="button-grid">
+                            <!-- Row 1: Basic Operations -->
+                            <button onclick="appendToDisplay('(')">( )</button>
+                            <button onclick="appendToDisplay(')')">)</button>
+                            <button onclick="clearDisplay()">C</button>
+                            <button onclick="deleteLastChar()">DEL</button>
+                            <button onclick="appendToDisplay('/')">÷</button>
+                            
+                            <!-- Row 2: Trigonometric -->
+                            <button onclick="calculateSin()">sin</button>
+                            <button onclick="calculateCos()">cos</button>
+                            <button onclick="calculateTan()">tan</button>
+                            <button onclick="appendToDisplay('*')">×</button>
+                            <button onclick="calculateLog()">log</button>
+                            
+                            <!-- Row 3: Power and Root -->
+                            <button onclick="calculateSqrt()">√</button>
+                            <button onclick="appendToDisplay('^')">x^y</button>
+                            <button onclick="calculateFactorial()">n!</button>
+                            <button onclick="appendToDisplay('-')">−</button>
+                            <button onclick="calculateLn()">ln</button>
+                            
+                            <!-- Row 4: Numbers and constants -->
+                            <button onclick="appendToDisplay('7')">7</button>
+                            <button onclick="appendToDisplay('8')">8</button>
+                            <button onclick="appendToDisplay('9')">9</button>
+                            <button onclick="appendToDisplay('+')">+</button>
+                            <button onclick="calculatePi()">π</button>
+                            
+                            <!-- Row 5: Numbers -->
+                            <button onclick="appendToDisplay('4')">4</button>
+                            <button onclick="appendToDisplay('5')">5</button>
+                            <button onclick="appendToDisplay('6')">6</button>
+                            <button onclick="toggleSign()">+/−</button>
+                            <button onclick="calculateE()">e</button>
+                            
+                            <!-- Row 6: Numbers -->
+                            <button onclick="appendToDisplay('1')">1</button>
+                            <button onclick="appendToDisplay('2')">2</button>
+                            <button onclick="appendToDisplay('3')">3</button>
+                            <button onclick="appendToDisplay('.')">.</button>
+                            <button onclick="calculatePercent()">%</button>
+                            
+                            <!-- Row 7: Zero and equals -->
+                            <button onclick="appendToDisplay('0')" class="zero-btn">0</button>
+                            <button onclick="calculateResult()" class="equals-btn">=</button>
                         </div>
                     </div>
                     <div class="col-lg-12">
                         <div class="form-group">
-                            <h2>Result:</h2>
                             <div id="result"></div>
                         </div>
                     </div>
